@@ -1,0 +1,41 @@
+{
+    "name": "wessama/google-play-version-scraper",
+    "description": "Scrapes the Google Play Store details page for an Android app to get its current version",
+    "license": "MIT",
+    "version" : "0.1",
+    "authors": [
+        {
+            "name": "Wessam Ahmed",
+            "email": "wessam.ah@outlook.com"
+        }
+    ],
+    "homepage": "https://github.com/wessama/google-play-version-scraper",
+    "keywords": ["Laravel", "GooglePlayVersionScraper"],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "~9|~10"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wessama\\GooglePlayVersionScraper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wessama\\GooglePlayVersionScraper\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wessama\\GooglePlayVersionScraper\\GooglePlayVersionScraperServiceProvider"
+            ],
+            "aliases": {
+                "GooglePlayVersionScraper": "Wessama\\GooglePlayVersionScraper\\Facades\\GooglePlayVersionScraper"
+            }
+        }
+    }
+}
