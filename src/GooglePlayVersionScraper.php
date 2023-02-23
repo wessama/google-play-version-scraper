@@ -28,10 +28,12 @@ class GooglePlayVersionScraper
         $scriptMatches = [];
         preg_match_all($this->scriptRegex, $html, $scriptMatches);
 
-        foreach ($scriptMatches[1] as $scriptMatch) {
-            $version = [];
-            if (preg_match($this->versionRegex, $scriptMatch, $version)) {
-                return $version[1];
+        foreach ($scriptMatches as $scriptMatch) {
+            foreach ($scriptMatch as $script) {
+                $version = [];
+                if (preg_match($this->versionRegex, $script, $version)) {
+                    return $version[1];
+                }
             }
         }
 
