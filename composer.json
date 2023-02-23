@@ -2,7 +2,7 @@
     "name": "wessama/google-play-version-scraper",
     "description": "Scrapes the Google Play Store details page for an Android app to get its current version",
     "license": "MIT",
-    "version" : "0.1",
+    "version" : "1.0.0",
     "authors": [
         {
             "name": "Wessam Ahmed",
