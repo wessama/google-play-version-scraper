@@ -26,8 +26,6 @@ class GooglePlayVersionScraperServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/google-play-version-scraper.php', 'google-play-version-scraper');
-
         // Register the service the package provides.
         $this->app->singleton('google-play-version-scraper', function ($app) {
             return new GooglePlayVersionScraper();
@@ -42,18 +40,5 @@ class GooglePlayVersionScraperServiceProvider extends ServiceProvider
     public function provides()
     {
         return ['google-play-version-scraper'];
-    }
-
-    /**
-     * Console-specific booting.
-     *
-     * @return void
-     */
-    protected function bootForConsole(): void
-    {
-        // Publishing the configuration file.
-        $this->publishes([
-            __DIR__ . '/../config/google-play-version-scraper.php' => config_path('google-play-version-scraper.php'),
-        ], 'google-play-version-scraper.config');
     }
 }

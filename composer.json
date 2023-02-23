@@ -10,9 +10,12 @@
         }
     ],
     "homepage": "https://github.com/wessama/google-play-version-scraper",
-    "keywords": ["Laravel", "GooglePlayVersionScraper"],
+    "keywords": ["GooglePlayVersionScraper", "Android", "Google", "PlayStore"],
     "require": {
         "php": "^8.0",
+        "ext-curl": "*"
+    },
+    "suggest": {
         "illuminate/support": "~9|~10"
     },
     "require-dev": {
