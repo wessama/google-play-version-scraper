@@ -26,15 +26,5 @@
         "psr-4": {
             "Wessama\\GooglePlayVersionScraper\\Tests\\": "tests"
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Wessama\\GooglePlayVersionScraper\\GooglePlayVersionScraperServiceProvider"
-            ],
-            "aliases": {
-                "GooglePlayVersionScraper": "Wessama\\GooglePlayVersionScraper\\Facades\\GooglePlayVersionScraper"
-            }
-        }
     }
 }
